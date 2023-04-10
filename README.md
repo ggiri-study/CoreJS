@@ -30,7 +30,7 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/hyeri-woo"><img src="width="100px;" alt=""/><br /><sub><b>조장 : 우혜리 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/hyeri-woo"><img src="https://avatars.githubusercontent.com/u/107099724?v=4" width="100px;" alt=""/><br /><sub><b>조장 : 우혜리 </b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/yyuli"><img src="https://avatars.githubusercontent.com/u/119276010?v=4" width="100px;" alt=""/><br /><sub><b>조원 : 김율이 </b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/vacation0706"><img src="https://avatars.githubusercontent.com/u/117337499?v=4" width="100px;" alt=""/><br /><sub><b>조원 : 성재윤</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/jiwon-o"><img src="https://avatars.githubusercontent.com/u/64193469?v=4" width="100px;" alt=""/><br /><sub><b>조원 : 오지원</b></sub></a><br /></td>
