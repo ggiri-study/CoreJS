@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>화살표함수 this</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        outer: function () {
+          console.log('in outer: ', this);
+          var innerFunc = () => {
+            console.log('in innerFunc: ', this);
+          };
+          innerFunc();
+        },
+      };
+
+      var obj2 = {
+        outer: function () {
+          console.log('in outer: ', this);
+          function innerFunc() {
+            console.log('in innerFunc: ', this);
+          }
+          innerFunc();
+        },
+      };
+      obj.outer();
+      obj2.outer();
+    </script>
+  </body>
+</html>

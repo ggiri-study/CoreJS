@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 주석은 브라우저 실행 결과입니다
+      var a = 1;
+      console.log(a); // 1
+      console.log(window.a); // 1
+      console.log(this.a); // 1
+      console.log(this); // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+      console.log(window); // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+      window.c = 3;
+      delete window.c;
+      console.log(c, window.c, this.c);
+    </script>
+  </body>
+</html>

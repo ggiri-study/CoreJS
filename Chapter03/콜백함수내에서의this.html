@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백함수 내에서의 this</title>
+  </head>
+  <body>
+    <script>
+      var report = {
+        sum: 0,
+        count: 0,
+        add: function () {
+          var args = Array.prototype.slice.call(arguments);
+          args.forEach(function (entry) {
+            // console.log(this);
+            this.sum += entry;
+            ++this.count;
+          });
+        },
+        average: function () {
+          // console.log(this);
+          return this.sum / this.count;
+        },
+      };
+      var report2 = {
+        sum: 0,
+        count: 0,
+        add: function () {
+          var args = Array.prototype.slice.call(arguments);
+          args.forEach(function (entry) {
+            this.sum += entry;
+            ++this.count;
+          }, this);
+        },
+        average: function () {
+          return this.sum / this.count;
+        },
+      };
+      report.add(60, 85, 95);
+      report2.add(60, 85, 95);
+      console.log(report.sum, report.count, report.average()); // 0 0 NaN
+      console.log(report2.sum, report2.count, report2.average()); // 240 3 80
+    </script>
+  </body>
+</html>
