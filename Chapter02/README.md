@@ -1,2 +1,5 @@
-[chapter01.pdf](https://github.com/ggiri-study/CoreJS/files/11138125/chapter01.pdf)
-예지님 강의 & pdf자료
+Core JavaScript_Chapter 2
+실행 컨텍스트
+
+성재윤
+김율이
