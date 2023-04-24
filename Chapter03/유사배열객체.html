@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유사배열객체</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        0: 'a',
+        1: 'b',
+        2: 'c',
+        length: 3,
+      };
+
+			// 유사배열아닌것도 적용
+      // var obj2 = {
+      //   a: 'one',
+      // };
+
+      // Array.prototype.push.call(obj2, 'a');
+      // console.log(obj2);
+
+      Array.prototype.push.call(obj, 'd');
+      console.log(obj);
+
+      var arr = Array.prototype.slice.call(obj);
+      console.log(arr);
+
+      var obj2 = {
+        zero: 'z',
+      };
+      Array.prototype.push.call(obj2, 'd');
+      console.log(obj2);
+
+      var arr2 = Array.prototype.slice.call(obj2);
+      console.log(arr2);
+
+      // arguments
+      function myConcat(separator) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return args.join(separator);
+      }
+      console.log(myConcat(', ', 'red', 'orange', 'blue')); // "red, orange, blue"
+
+      // nodeList
+      document.body.innerHTML = '<div>a</div><div>b</div><div>c</div>';
+      var nodeList = document.querySelectorAll('div');
+      var nodeArr = Array.prototype.slice.call(nodeList);
+      nodeArr.forEach(function (node) {
+        console.log(node);
+      });
+    </script>
+  </body>
+</html>

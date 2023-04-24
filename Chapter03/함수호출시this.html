@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 호출시 내부 this</title>
+  </head>
+  <body>
+    <script>
+      var obj1 = {
+        outer: function () {
+          console.log(this);
+          var innerFunc = function () {
+            console.log(this);
+          };
+          innerFunc(); // 이곳에서 호출한 this는 window
+
+          var obj2 = {
+            innerMethod: innerFunc,
+          };
+          obj2.innerMethod(); // 이곳에서 호출한 this는 obj2
+        },
+      };
+      obj1.outer(); // 이곳에서 호출한 this는 obj1
+    </script>
+  </body>
+</html>

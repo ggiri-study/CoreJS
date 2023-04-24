@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생성자</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, gender) {
+        this.name = name;
+        this.gender = gender;
+      }
+
+      function Student(name, gender, school) {
+        Person.call(this, name, gender);
+        this.school = school;
+      }
+
+      function Employee(name, gender, company) {
+        Person.apply(this, [name, gender]);
+        this.company = company;
+      }
+
+      var by = new Student('보영', 'female', '단국대');
+      var jn = new Employee('재난', 'male', '구골');
+      var ps = new Person('가', '나');
+      console.log('by: ', by);
+      console.log('jn: ', jn);
+      console.log('ps: ', ps);
+    </script>
+  </body>
+</html>
